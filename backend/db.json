@@ -1,0 +1,197 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "createdAt": "2025-08-22T00:00:00.000Z"
+    },
+    {
+      "id": "a334",
+      "name": "Ritik Kumar",
+      "email": "ritikkumar12bicbly@gmail.com",
+      "password": "asdfghjkl",
+      "phone": "09808470386",
+      "role": "user",
+      "createdAt": "2025-08-25T01:26:41.260Z",
+      "active": false
+    },
+    {
+      "id": "1737",
+      "name": "Ritik Kumar",
+      "email": "Ritikkumar12bicbly@gmail.com",
+      "password": "9808470386",
+      "phone": "9808470386",
+      "role": "owner",
+      "createdAt": "2025-08-25T01:42:59.012Z"
+    },
+    {
+      "id": "44a6",
+      "name": "Pushpa",
+      "email": "pushpa@gmail.com",
+      "password": "asdfghjkl",
+      "phone": "7599949766",
+      "role": "user",
+      "createdAt": "2025-08-25T01:59:41.700Z"
+    },
+    {
+      "id": "c950",
+      "name": "Vighnesh Shukla",
+      "email": "vighnesh@gmai.com",
+      "password": "asdfghjkl",
+      "phone": "7518929964",
+      "role": "user",
+      "createdAt": "2025-08-25T04:52:58.041Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "name": "Haircut & Styling",
+      "price": 100,
+      "duration": 25,
+      "description": "Professional haircut and styling service"
+    },
+    {
+      "id": "2",
+      "name": "Manicure",
+      "price": 190,
+      "duration": 45,
+      "description": "Complete nail care and polish"
+    },
+    {
+      "id": "3",
+      "name": "Facial Treatment",
+      "price": 300,
+      "duration": 60,
+      "description": "Rejuvenating facial treatment"
+    },
+    {
+      "id": "4",
+      "name": "Full Body Massage",
+      "price": 600,
+      "duration": 90,
+      "description": "Relaxing full body massage"
+    },
+    {
+      "id": "9cb6",
+      "name": "Padicure",
+      "price": 650,
+      "duration": 60,
+      "description": "We Have The Professionals to do Padicure"
+    },
+    {
+      "id": "e156",
+      "name": "Therapy",
+      "price": 2000,
+      "duration": 60,
+      "description": "Therapist will be of the very professional bg"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "504b",
+      "userId": "a334",
+      "serviceId": "1",
+      "serviceName": "Haircut & Styling",
+      "price": 70,
+      "date": "2025-08-25",
+      "slot": "09:00 AM - 10:00 AM",
+      "status": "completed",
+      "createdAt": "2025-08-25T01:32:42.451Z",
+      "feedback": "very good\n",
+      "stars": 5
+    },
+    {
+      "id": "e246",
+      "userId": "a334",
+      "serviceId": "2",
+      "serviceName": "Manicure",
+      "price": 190,
+      "date": "2025-08-26",
+      "slot": "11:00 AM - 12:00 PM",
+      "status": "completed",
+      "createdAt": "2025-08-25T01:38:28.110Z",
+      "feedback": "very good services",
+      "stars": 5
+    },
+    {
+      "id": "0711",
+      "userId": "a334",
+      "serviceId": "2",
+      "serviceName": "Manicure",
+      "price": 190,
+      "date": "2025-08-26",
+      "slot": "12:00 PM - 01:00 PM",
+      "status": "completed",
+      "createdAt": "2025-08-25T01:43:51.582Z",
+      "feedback": "asjklkhdsa\n",
+      "stars": 5
+    },
+    {
+      "id": "b807",
+      "userId": "44a6",
+      "serviceId": "2",
+      "serviceName": "Manicure",
+      "price": 190,
+      "date": "2025-08-26",
+      "slot": "10:00 AM - 11:00 AM",
+      "status": "completed",
+      "createdAt": "2025-08-25T02:00:08.089Z",
+      "feedback": "very good services\n",
+      "stars": 5
+    },
+    {
+      "id": "c2a9",
+      "userId": "44a6",
+      "serviceId": "1",
+      "serviceName": "Haircut & Styling",
+      "price": 70,
+      "date": "2025-08-27",
+      "slot": "04:00 PM - 05:00 PM",
+      "status": "completed",
+      "createdAt": "2025-08-25T02:10:30.568Z",
+      "feedback": "Good Services at this price point\n",
+      "stars": 5
+    },
+    {
+      "id": "3812",
+      "userId": null,
+      "serviceId": "9cb6",
+      "serviceName": "Padicure",
+      "price": 650,
+      "date": "2025-08-27",
+      "slot": "12:00 PM - 01:00 PM",
+      "status": "cancelled",
+      "createdAt": "2025-08-25T04:17:25.970Z"
+    },
+    {
+      "id": "2d2e",
+      "userId": null,
+      "serviceId": "e156",
+      "serviceName": "Therapy",
+      "price": 2000,
+      "date": "2025-08-27",
+      "slot": "12:00 PM - 01:00 PM",
+      "status": "completed",
+      "createdAt": "2025-08-25T04:21:03.323Z",
+      "feedback": "very good\n",
+      "stars": 5
+    },
+    {
+      "id": "5ddf",
+      "userId": "a334",
+      "serviceId": "2",
+      "serviceName": "Manicure",
+      "price": 190,
+      "date": "2025-08-25",
+      "slot": "12:00 PM - 01:00 PM",
+      "status": "completed",
+      "createdAt": "2025-08-25T04:30:48.496Z",
+      "feedback": "Very Good Service",
+      "stars": 5
+    }
+  ]
+}
