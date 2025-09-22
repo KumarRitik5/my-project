@@ -1,0 +1,529 @@
+/* ✨ Beautiful Modern Star Rating Component ✨ */
+.star-rating-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  user-select: none;
+  position: relative;
+}
+
+.star-rating-wrapper.small {
+  gap: 1rem;
+}
+
+.star-rating-wrapper.large {
+  gap: 2rem;
+}
+
+/* 🎯 Rating Label with Icon */
+.star-rating-label {
+  color: var(--text-color, #2d3748);
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.rating-icon {
+  font-size: 1.4rem;
+  animation: starTwinkle 2s ease-in-out infinite;
+}
+
+@keyframes starTwinkle {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(-5deg); }
+  75% { transform: scale(0.9) rotate(5deg); }
+}
+
+.star-rating-wrapper.small .star-rating-label {
+  font-size: 1rem;
+}
+
+/* 🌟 Star Container with Background Glow */
+.star-rating-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+  padding: 1rem 1.5rem;
+  border-radius: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: none;
+}
+
+.stars-background-glow {
+  display: none;
+}
+
+.star-rating-container.interactive {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.star-rating-container.interactive:hover {
+  background: transparent;
+  border: none;
+  transform: translateY(-2px);
+  box-shadow: none;
+}
+
+.star-rating-container.interactive:hover .stars-background-glow {
+  opacity: 1;
+}
+
+.star-rating-container.readonly {
+  background: transparent;
+  border: none;
+  padding: 1rem 1.5rem;
+}
+
+/* ⭐ Individual Star Wrapper */
+.star-wrapper {
+  position: relative;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  z-index: 2;
+}
+
+.star-rating-container.readonly .star-wrapper {
+  cursor: default;
+}
+
+.star-wrapper:hover {
+  transform: scale(1.25) rotate(10deg);
+  z-index: 10;
+}
+
+.star-wrapper.hovered {
+  transform: scale(1.3) rotate(-10deg);
+  animation: starBounce 0.6s ease-out;
+}
+
+.star-wrapper.selected {
+  transform: scale(1.2);
+  animation: starSuccess 0.8s ease-out;
+}
+
+.star-wrapper.filled {
+  animation: starFillAnimation 0.6s ease-out;
+}
+
+.star-rating-container.readonly .star-wrapper:hover {
+  transform: none;
+}
+
+/* 🎆 Star Animations */
+@keyframes starBounce {
+  0% { transform: scale(1) rotate(0deg); }
+  30% { transform: scale(1.4) rotate(-15deg); }
+  60% { transform: scale(1.2) rotate(5deg); }
+  100% { transform: scale(1.3) rotate(-10deg); }
+}
+
+@keyframes starSuccess {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.4) rotate(-20deg); }
+  50% { transform: scale(1.1) rotate(10deg); }
+  75% { transform: scale(1.3) rotate(-5deg); }
+  100% { transform: scale(1.2) rotate(0deg); }
+}
+
+@keyframes starFillAnimation {
+  0% { 
+    transform: scale(0.8) rotate(-180deg); 
+    opacity: 0.7; 
+  }
+  50% { 
+    transform: scale(1.1) rotate(-90deg); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: scale(1) rotate(0deg); 
+    opacity: 1; 
+  }
+}
+
+.star-burst {
+  animation: containerBurst 0.6s ease-out;
+}
+
+@keyframes containerBurst {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* 🌟 Star Background and Fill */
+.star-background,
+.star-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+
+.star-background {
+  z-index: 1;
+}
+
+.star-fill {
+  z-index: 2;
+  opacity: 0;
+  transform: scale(0.7) rotate(-30deg);
+}
+
+.star-wrapper.filled .star-fill {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* ✨ Star Sparkle Effect */
+.star-sparkle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: sparkleEffect 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkleEffect {
+  0%, 100% { transform: translate(-50%, -50%) scale(0) rotate(0deg); opacity: 0; }
+  25% { transform: translate(-50%, -50%) scale(1) rotate(90deg); opacity: 1; }
+  75% { transform: translate(-50%, -50%) scale(0.8) rotate(180deg); opacity: 0.7; }
+}
+
+.star-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 📏 Star Sizes */
+.star-rating-wrapper.small .star-wrapper {
+  width: 32px;
+  height: 32px;
+}
+
+.star-rating-wrapper.medium .star-wrapper {
+  width: 42px;
+  height: 42px;
+}
+
+.star-rating-wrapper.large .star-wrapper {
+  width: 52px;
+  height: 52px;
+}
+
+/* 🎨 Star Colors with Gradients */
+.star-background .star-icon {
+  fill: #e2e8f0;
+  stroke: #cbd5e0;
+  stroke-width: 0.5;
+}
+
+.star-fill .star-icon {
+  fill: url(#starGradient);
+  filter: 
+    drop-shadow(0 0 10px rgba(255, 215, 0, 0.5))
+    drop-shadow(0 4px 8px rgba(255, 193, 7, 0.3));
+}
+
+/* Create gradient definition */
+.star-rating-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.star-rating-wrapper::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='starGradient' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffd700;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%23ffed4e;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23ff8f00;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Dark theme support */
+[data-theme="dark"] .star-background .star-icon {
+  fill: #4a5568;
+  stroke: #2d3748;
+}
+
+[data-theme="dark"] .star-fill .star-icon {
+  fill: #fbbf24;
+  filter: 
+    drop-shadow(0 0 12px rgba(251, 191, 36, 0.6))
+    drop-shadow(0 4px 8px rgba(245, 158, 11, 0.4));
+}
+
+/* 🌊 Ripple and Particle Effects */
+.star-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, rgba(255, 215, 0, 0.1) 50%, transparent 100%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+
+.star-wrapper:active .star-ripple {
+  width: 80px;
+  height: 80px;
+  animation: rippleWave 0.6s ease-out;
+}
+
+@keyframes rippleWave {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.8;
+  }
+  50% {
+    width: 60px;
+    height: 60px;
+    opacity: 0.4;
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+.star-particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: #ffd700;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.star-wrapper:hover .star-particle {
+  animation: particleFloat 1s ease-out infinite;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -200%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -300%) scale(0);
+    opacity: 0;
+  }
+}
+
+/* 💬 Enhanced Rating Text */
+.rating-text {
+  position: relative;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-align: center;
+  min-height: 2rem;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #667eea;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.rating-text.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.rating-value {
+  display: inline-block;
+  animation: textSlideIn 0.5s ease-out;
+  color: #667eea;
+  font-weight: 700;
+  font-family: 'Segoe UI', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  font-feature-settings: 'liga' 1;
+}
+
+/* Ensure emojis render properly */
+.rating-text,
+.rating-value {
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  text-rendering: optimizeLegibility;
+}
+
+@keyframes textSlideIn {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.star-rating-wrapper.small .rating-text {
+  font-size: 1rem;
+  min-height: 1.5rem;
+}
+
+/* 🏆 Excellence Badge */
+.excellence-badge {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff6b6b, #ffd93d);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  animation: badgeAppear 0.6s ease-out;
+  box-shadow: none;
+}
+
+@keyframes badgeAppear {
+  0% {
+    transform: translateX(-50%) scale(0) rotate(-10deg);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(-50%) scale(1.1) rotate(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* 🔥 Special 5-star Effects */
+.star-wrapper.filled:nth-child(6) .star-fill .star-icon {
+  animation: excellentPulse 2s ease-in-out infinite;
+}
+
+@keyframes excellentPulse {
+  0%, 100% {
+    filter: 
+      drop-shadow(0 0 10px rgba(255, 215, 0, 0.5))
+      drop-shadow(0 4px 8px rgba(255, 193, 7, 0.3));
+  }
+  50% {
+    filter: 
+      drop-shadow(0 0 20px rgba(255, 215, 0, 0.8))
+      drop-shadow(0 4px 12px rgba(255, 193, 7, 0.5));
+  }
+}
+
+/* 📱 Mobile Optimizations */
+@media (max-width: 768px) {
+  .star-rating-wrapper.large .star-wrapper {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .star-rating-container {
+    gap: 0.3rem;
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .star-wrapper:hover {
+    transform: scale(1.15);
+  }
+  
+  .rating-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .star-rating-wrapper.large .star-wrapper {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .star-rating-container {
+    padding: 1rem;
+  }
+  
+  .rating-text {
+    font-size: 1rem;
+  }
+  
+  .star-rating-label {
+    font-size: 1rem;
+  }
+}
+
+/* ♿ Accessibility */
+.star-wrapper:focus {
+  outline: 3px solid #667eea;
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
+.star-wrapper:focus-visible {
+  animation: focusPulse 1s ease-in-out infinite;
+}
+
+@keyframes focusPulse {
+  0%, 100% { outline-color: #667eea; }
+  50% { outline-color: #764ba2; }
+}
+
+/* 🎭 Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .star-wrapper,
+  .star-icon,
+  .star-fill,
+  .rating-text,
+  .star-sparkle,
+  .excellence-badge {
+    animation: none;
+    transition: opacity 0.2s ease;
+  }
+  
+  .star-wrapper:hover {
+    transform: scale(1.05);
+  }
+  
+  .star-rating-container:hover {
+    transform: none;
+  }
+}

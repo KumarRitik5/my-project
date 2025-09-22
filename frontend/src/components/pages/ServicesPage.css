@@ -1,0 +1,194 @@
+/* Professional Services Page Styles */
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: var(--font-family);
+  background: var(--bg-color);
+  min-height: 100vh;
+  transition: all var(--transition-normal);
+}
+
+.services-container h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 3rem;
+  letter-spacing: -0.5px;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.services-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--bg-color);
+  padding: 2.2rem 1.5rem 2rem 1.5rem;
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+.service-card h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: color var(--transition-normal);
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  font-size: 1.08rem;
+  margin-bottom: 0.5rem;
+  transition: color var(--transition-normal);
+}
+@media (max-width: 768px) {
+  .services-container {
+    padding: 1rem;
+  }
+}
+.services-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.services-page h1 {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-content {
+  padding: 1.5rem;
+}
+
+.service-content h2 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.service-description {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.service-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.duration {
+  color: var(--text-secondary);
+}
+
+.book-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--border-radius-lg);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin-top: 1rem;
+  box-shadow: var(--shadow-primary);
+}
+
+.book-button:hover {
+  background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary-hover);
+  color: white;
+  text-decoration: none;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.error {
+  color: var(--text-color) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services-page {
+    padding: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

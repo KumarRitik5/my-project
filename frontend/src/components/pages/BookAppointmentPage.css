@@ -1,0 +1,375 @@
+/* Professional Booking Styles with theme support */
+.booking-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 3rem 2.5rem;
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(20px);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-color);
+  animation: fadeInUp 1s ease-out;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.booking-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, var(--primary-light), var(--secondary-light), var(--accent-light), var(--primary-light));
+  animation: rotate 30s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.booking-container h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.booking-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
+}
+
+/* Professional Form Styles */
+.form-group {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-color) !important;
+  transition: color var(--transition-normal);
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  font-size: 16px;
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: all var(--transition-normal);
+  font-family: inherit;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.form-group select:hover,
+.form-group input:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)) !important;
+  color: white !important;
+  border: none;
+  border-radius: var(--border-radius-lg);
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow);
+  margin-top: 1.2rem;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(45deg, var(--secondary-color), var(--primary-color)) !important;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: var(--shadow-lg);
+}
+
+.form-group select:invalid,
+.form-group input:invalid {
+  border-color: var(--error-color);
+}
+
+/* Time Slot Grid Styles with theme support */
+.time-slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.time-slot-item {
+  padding: 12px 8px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-size: 0.9rem;
+  transition: all var(--transition-normal);
+  position: relative;
+  user-select: none;
+  border: 2px solid;
+  font-weight: 500;
+}
+
+.time-slot-item.available {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color);
+  color: var(--text-color) !important;
+  cursor: pointer;
+}
+
+.time-slot-item.available:hover {
+  background-color: var(--hover-bg) !important;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.time-slot-item.selected {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color);
+  color: white !important;
+  font-weight: bold;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-1px);
+}
+
+.time-slot-item.booked {
+  background-color: var(--card-bg) !important;
+  border-color: var(--text-muted);
+  color: var(--text-muted) !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.time-slot-item.past {
+  background-color: var(--card-bg) !important;
+  border-color: var(--text-muted);
+  color: var(--text-muted) !important;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.time-slot-time {
+  font-weight: 600;
+}
+
+.time-slot-status {
+  font-size: 0.7rem;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.time-slot-legend {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text-secondary) !important;
+  flex-wrap: wrap;
+  transition: color var(--transition-normal);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--border-radius-sm);
+  border: 2px solid;
+}
+
+.legend-available .legend-color {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+.legend-selected .legend-color {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.legend-booked .legend-color {
+  background-color: var(--card-bg);
+  border-color: var(--text-muted);
+  opacity: 0.6;
+}
+
+/* Business Hours Information */
+.business-hours-info {
+  background: var(--card-bg) !important;
+  padding: 1rem;
+  border-radius: var(--border-radius-lg);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+}
+
+.business-hours-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text-color) !important;
+  font-weight: 600;
+  transition: color var(--transition-normal);
+}
+
+.hours-list {
+  font-size: 0.9rem;
+  color: var(--text-secondary) !important;
+  transition: color var(--transition-normal);
+}
+
+.hours-list p {
+  margin-bottom: 0.25rem;
+  color: var(--text-secondary) !important;
+}
+
+.hours-list strong {
+  color: var(--text-color) !important;
+}
+
+.booking-note {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: var(--border-radius);
+  font-size: 0.8rem;
+  color: var(--info-color) !important;
+  border: 1px solid var(--info-color);
+  transition: all var(--transition-normal);
+}
+
+.booking-note strong {
+  color: var(--info-color) !important;
+}
+
+/* No slots message */
+.no-slots-message {
+  grid-column: 1 / -1;
+  padding: 0.75rem;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid var(--warning-color);
+  border-radius: var(--border-radius);
+  color: var(--warning-color) !important;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+/* Enhanced loading styles */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary) !important;
+  font-size: 1rem;
+  transition: color var(--transition-normal);
+}
+
+.error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--error-color) !important;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--error-color);
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: var(--success-color) !important;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--success-color);
+  margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .booking-container {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .booking-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .time-slot-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 8px;
+  }
+  
+  .time-slot-item {
+    padding: 10px 6px;
+    font-size: 0.85rem;
+  }
+  
+  .time-slot-legend {
+    gap: 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .booking-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .time-slot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-group select,
+  .form-group input {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}

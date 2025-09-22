@@ -1,0 +1,757 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "createdAt": "2025-08-22T00:00:00.000Z"
+    },
+    {
+      "id": "9bfc",
+      "name": "Ritik Kumar",
+      "email": "ritikkumar12bicbly@gmail.com",
+      "password": "asdfghjkl",
+      "phone": "09808470386",
+      "role": "owner",
+      "createdAt": "2025-09-19T02:17:14.255Z"
+    },
+    {
+      "id": "024d",
+      "name": "Ritik Kumar",
+      "email": "Ritik@gmail.com",
+      "password": "asdfghjkl",
+      "phone": "9808470386",
+      "role": "user",
+      "createdAt": "2025-09-19T02:19:14.158Z"
+    },
+    {
+      "id": "4247",
+      "name": "Suresh",
+      "email": "suresh@gmail.com",
+      "password": "asdfghjkl",
+      "phone": "1234567890",
+      "role": "user",
+      "createdAt": "2025-09-19T03:02:31.659Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "name": "💇 Men's Haircut",
+      "category": "Hair Care",
+      "price": 120,
+      "duration": 30,
+      "description": "Professional men's haircut with wash, cut, and styling. Includes beard trim if needed."
+    },
+    {
+      "id": "2",
+      "name": "💇‍♀️ Women's Haircut",
+      "category": "Hair Care",
+      "price": 180,
+      "duration": 45,
+      "description": "Precision women's haircut with consultation, wash, cut, and blow dry styling."
+    },
+    {
+      "id": "3",
+      "name": "👶 Kids Haircut",
+      "category": "Hair Care",
+      "price": 80,
+      "duration": 25,
+      "description": "Gentle and fun haircut experience for children with special care and attention."
+    },
+    {
+      "id": "4",
+      "name": "🧴 Hair Wash & Blow Dry",
+      "category": "Hair Care",
+      "price": 60,
+      "duration": 30,
+      "description": "Professional hair wash with premium shampoo and expert blow dry styling."
+    },
+    {
+      "id": "5",
+      "name": "💫 Hair Styling (Straightening/Curling)",
+      "category": "Hair Care",
+      "price": 150,
+      "duration": 60,
+      "description": "Professional hair styling including straightening, curling, updos, and party styles."
+    },
+    {
+      "id": "6",
+      "name": "🎨 Hair Coloring (Global)",
+      "category": "Hair Care",
+      "price": 800,
+      "duration": 120,
+      "description": "Complete hair coloring transformation with premium quality colors and treatments."
+    },
+    {
+      "id": "7",
+      "name": "✨ Highlights & Balayage",
+      "category": "Hair Care",
+      "price": 1200,
+      "duration": 150,
+      "description": "Professional highlights, balayage, or ombre coloring techniques for natural-looking dimension."
+    },
+    {
+      "id": "8",
+      "name": "🌿 Keratin Treatment",
+      "category": "Hair Care",
+      "price": 2500,
+      "duration": 180,
+      "description": "Smoothening keratin treatment for frizz-free, manageable, and shiny hair."
+    },
+    {
+      "id": "9",
+      "name": "💆‍♀️ Hair Spa & Scalp Treatment",
+      "category": "Hair Care",
+      "price": 400,
+      "duration": 75,
+      "description": "Nourishing hair spa with scalp massage, anti-dandruff treatment, and hair masks."
+    },
+    {
+      "id": "10",
+      "name": "🍓 Fruit Facial",
+      "category": "Skin Care",
+      "price": 300,
+      "duration": 60,
+      "description": "Natural fruit facial with cleansing, exfoliation, and moisturizing for glowing skin."
+    },
+    {
+      "id": "11",
+      "name": "👑 Gold Facial",
+      "category": "Skin Care",
+      "price": 800,
+      "duration": 75,
+      "description": "Luxurious gold facial for anti-aging benefits and radiant, youthful complexion."
+    },
+    {
+      "id": "12",
+      "name": "💎 Diamond Facial",
+      "category": "Skin Care",
+      "price": 1200,
+      "duration": 90,
+      "description": "Premium diamond facial for deep exfoliation, brightening, and instant glow."
+    },
+    {
+      "id": "13",
+      "name": "💧 HydraFacial",
+      "category": "Skin Care",
+      "price": 1500,
+      "duration": 60,
+      "description": "Advanced hydrafacial treatment for deep cleansing, hydration, and anti-aging benefits."
+    },
+    {
+      "id": "14",
+      "name": "🧼 Deep Cleanup",
+      "category": "Skin Care",
+      "price": 250,
+      "duration": 45,
+      "description": "Deep cleansing treatment for blackhead removal, pore cleaning, and skin purification."
+    },
+    {
+      "id": "15",
+      "name": "🌟 Chemical Peel",
+      "category": "Skin Care",
+      "price": 2000,
+      "duration": 45,
+      "description": "Professional chemical peel treatment for skin renewal, acne treatment, and brightening."
+    },
+    {
+      "id": "16",
+      "name": "💅 Classic Manicure",
+      "category": "Nail Care",
+      "price": 200,
+      "duration": 45,
+      "description": "Complete nail care with shaping, cuticle treatment, hand massage, and polish application."
+    },
+    {
+      "id": "17",
+      "name": "🦶 Classic Pedicure",
+      "category": "Nail Care",
+      "price": 300,
+      "duration": 60,
+      "description": "Relaxing foot care with exfoliation, nail shaping, callus removal, and polish."
+    },
+    {
+      "id": "18",
+      "name": "✨ Spa Manicure & Pedicure",
+      "category": "Nail Care",
+      "price": 600,
+      "duration": 90,
+      "description": "Luxury spa treatment for hands and feet with premium products and extended massage."
+    },
+    {
+      "id": "19",
+      "name": "💎 Nail Extensions",
+      "category": "Nail Care",
+      "price": 800,
+      "duration": 120,
+      "description": "Professional nail extensions with acrylic, gel, or French tips for longer, beautiful nails."
+    },
+    {
+      "id": "20",
+      "name": "🎨 Nail Art",
+      "category": "Nail Care",
+      "price": 400,
+      "duration": 60,
+      "description": "Creative nail art designs with premium colors and artistic patterns."
+    },
+    {
+      "id": "21",
+      "name": "💪 Swedish Full Body Massage",
+      "category": "Body Treatments",
+      "price": 1200,
+      "duration": 90,
+      "description": "Relaxing Swedish massage for stress relief and muscle tension release."
+    },
+    {
+      "id": "22",
+      "name": "🔥 Deep Tissue Massage",
+      "category": "Body Treatments",
+      "price": 1500,
+      "duration": 75,
+      "description": "Therapeutic deep tissue massage for chronic pain relief and muscle recovery."
+    },
+    {
+      "id": "23",
+      "name": "🌸 Aromatherapy Massage",
+      "category": "Body Treatments",
+      "price": 1400,
+      "duration": 90,
+      "description": "Calming aromatherapy massage with essential oils for complete relaxation."
+    },
+    {
+      "id": "24",
+      "name": "🧖‍♀️ Body Scrub & Polish",
+      "category": "Body Treatments",
+      "price": 800,
+      "duration": 60,
+      "description": "Exfoliating body scrub and polish for smooth, glowing, and rejuvenated skin."
+    },
+    {
+      "id": "25",
+      "name": "🌿 Detoxifying Body Wrap",
+      "category": "Body Treatments",
+      "price": 1000,
+      "duration": 75,
+      "description": "Detoxifying body wrap treatment for skin purification and inch loss."
+    },
+    {
+      "id": "26",
+      "name": "💨 Steam Bath",
+      "category": "Spa & Wellness",
+      "price": 300,
+      "duration": 30,
+      "description": "Relaxing steam bath session for detoxification and skin cleansing."
+    },
+    {
+      "id": "27",
+      "name": "🔥 Sauna Session",
+      "category": "Spa & Wellness",
+      "price": 400,
+      "duration": 30,
+      "description": "Therapeutic sauna session for stress relief and improved circulation."
+    },
+    {
+      "id": "28",
+      "name": "🛁 Jacuzzi Session",
+      "category": "Spa & Wellness",
+      "price": 500,
+      "duration": 45,
+      "description": "Luxurious jacuzzi session for ultimate relaxation and muscle relief."
+    },
+    {
+      "id": "29",
+      "name": "💑 Couple Spa Package",
+      "category": "Spa & Wellness",
+      "price": 3500,
+      "duration": 150,
+      "description": "Romantic couple spa experience with synchronized massage and wellness treatments."
+    },
+    {
+      "id": "30",
+      "name": "💄 Party Makeup",
+      "category": "Makeup",
+      "price": 800,
+      "duration": 60,
+      "description": "Professional party makeup with premium products for special occasions."
+    },
+    {
+      "id": "31",
+      "name": "👰 Bridal Makeup",
+      "category": "Makeup",
+      "price": 3000,
+      "duration": 120,
+      "description": "Complete bridal makeup package with trial, hair styling, and touch-up kit."
+    },
+    {
+      "id": "32",
+      "name": "✨ Airbrush Makeup",
+      "category": "Makeup",
+      "price": 1500,
+      "duration": 90,
+      "description": "Long-lasting airbrush makeup for flawless, photo-ready finish."
+    },
+    {
+      "id": "33",
+      "name": "👗 Saree Draping & Styling",
+      "category": "Makeup",
+      "price": 600,
+      "duration": 45,
+      "description": "Professional saree draping with hair styling for traditional events."
+    },
+    {
+      "id": "34",
+      "name": "🦵 Full Body Waxing",
+      "category": "Waxing & Threading",
+      "price": 1200,
+      "duration": 120,
+      "description": "Complete full body waxing service with premium wax and after-care."
+    },
+    {
+      "id": "35",
+      "name": "💪 Arms & Legs Waxing",
+      "category": "Waxing & Threading",
+      "price": 600,
+      "duration": 60,
+      "description": "Professional waxing for arms and legs with soothing after-care treatment."
+    },
+    {
+      "id": "36",
+      "name": "🦋 Bikini Waxing",
+      "category": "Waxing & Threading",
+      "price": 800,
+      "duration": 45,
+      "description": "Professional bikini area waxing with hygienic practices and comfort care."
+    },
+    {
+      "id": "37",
+      "name": "👁️ Eyebrow Threading",
+      "category": "Waxing & Threading",
+      "price": 100,
+      "duration": 15,
+      "description": "Precise eyebrow shaping and threading for perfectly defined brows."
+    },
+    {
+      "id": "38",
+      "name": "👄 Upper Lip Threading",
+      "category": "Waxing & Threading",
+      "price": 80,
+      "duration": 10,
+      "description": "Quick and precise upper lip threading for smooth, hair-free skin."
+    },
+    {
+      "id": "39",
+      "name": "👁️ Eyelash Extensions",
+      "category": "Additional Services",
+      "price": 1500,
+      "duration": 120,
+      "description": "Professional eyelash extensions for longer, fuller, and more dramatic lashes."
+    },
+    {
+      "id": "40",
+      "name": "🖋️ Eyebrow Microblading",
+      "category": "Additional Services",
+      "price": 8000,
+      "duration": 180,
+      "description": "Semi-permanent eyebrow microblading for naturally fuller and defined brows."
+    },
+    {
+      "id": "41",
+      "name": "🌺 Mehendi Design",
+      "category": "Additional Services",
+      "price": 500,
+      "duration": 90,
+      "description": "Beautiful traditional mehendi designs for hands and feet for special occasions."
+    },
+    {
+      "id": "42",
+      "name": "💎 Ear Piercing",
+      "category": "Additional Services",
+      "price": 300,
+      "duration": 15,
+      "description": "Safe and hygienic ear piercing service with premium jewelry options."
+    },
+    {
+      "id": "43",
+      "name": "👰 Pre-Bridal Package",
+      "category": "Additional Services",
+      "price": 15000,
+      "duration": 300,
+      "description": "Complete pre-bridal grooming package with multiple sessions over 2-3 weeks."
+    },
+    {
+      "id": "44",
+      "name": "🤵 Pre-Groom Package",
+      "category": "Additional Services",
+      "price": 8000,
+      "duration": 180,
+      "description": "Comprehensive grooming package for grooms including facial, massage, and styling."
+    }
+  ],
+  "appointments": [
+    {
+      "id": "c9f0",
+      "userId": "024d",
+      "serviceId": "1",
+      "serviceName": "Premium Haircut & Styling",
+      "price": 150,
+      "date": "2025-09-19",
+      "slot": "9:00 AM - 9:45 AM",
+      "status": "completed",
+      "createdAt": "2025-09-19T02:55:40.913Z",
+      "cancellationReason": "",
+      "cancelledBy": "",
+      "cancelledAt": "",
+      "updatedAt": "2025-09-19T02:56:38.615Z",
+      "feedback": "very good services.",
+      "stars": 5
+    },
+    {
+      "id": "c90b",
+      "userId": "024d",
+      "serviceId": "2",
+      "serviceName": "Luxury Manicure & Polish",
+      "price": 250,
+      "date": "2025-09-19",
+      "slot": "9:15 AM - 10:15 AM",
+      "status": "completed",
+      "createdAt": "2025-09-19T03:01:25.724Z",
+      "cancellationReason": "",
+      "cancelledBy": "",
+      "cancelledAt": "",
+      "updatedAt": "2025-09-19T03:14:51.946Z"
+    },
+    {
+      "id": "69e7",
+      "userId": "4247",
+      "serviceId": "2",
+      "serviceName": "Luxury Manicure & Polish",
+      "price": 250,
+      "date": "2025-09-19",
+      "slot": "10:15 AM - 11:15 AM",
+      "status": "completed",
+      "createdAt": "2025-09-19T03:02:50.862Z",
+      "cancellationReason": "",
+      "cancelledBy": "",
+      "cancelledAt": "",
+      "updatedAt": "2025-09-19T03:14:55.468Z"
+    },
+    {
+      "id": "cf80",
+      "userId": "024d",
+      "serviceId": "1",
+      "serviceName": "Premium Haircut & Styling",
+      "price": 150,
+      "date": "2025-09-19",
+      "slot": "3:15 PM - 4:00 PM",
+      "status": "cancelled",
+      "createdAt": "2025-09-19T09:06:50.371Z",
+      "cancellationReason": "i have change my mind.",
+      "cancelledBy": "customer",
+      "cancelledAt": "2025-09-19T09:08:41.403Z",
+      "updatedAt": "2025-09-19T09:07:44.212Z",
+      "cancelledByName": "Ritik Kumar"
+    },
+    {
+      "id": "1dda",
+      "userId": "024d",
+      "serviceId": "1",
+      "serviceName": "Premium Haircut & Styling",
+      "price": 150,
+      "date": "2025-09-19",
+      "slot": "3:15 PM - 4:00 PM",
+      "status": "completed",
+      "createdAt": "2025-09-19T09:14:33.766Z",
+      "cancellationReason": "",
+      "cancelledBy": "",
+      "cancelledAt": "",
+      "updatedAt": "2025-09-21T07:57:38.018Z"
+    },
+    {
+      "id": "ff8f",
+      "userId": "024d",
+      "serviceId": "1",
+      "serviceName": "Premium Haircut & Styling",
+      "price": 150,
+      "date": "2025-09-21",
+      "slot": "2:00 PM - 2:45 PM",
+      "status": "completed",
+      "createdAt": "2025-09-21T07:55:50.560Z",
+      "cancellationReason": "",
+      "cancelledBy": "",
+      "cancelledAt": "",
+      "updatedAt": "2025-09-21T07:57:35.784Z"
+    },
+    {
+      "id": "4eb4",
+      "userId": "024d",
+      "serviceId": "1",
+      "serviceName": "Premium Haircut & Styling",
+      "price": 150,
+      "date": "2025-09-21",
+      "slot": "2:30 PM - 3:15 PM",
+      "status": "cancelled",
+      "createdAt": "2025-09-21T08:17:41.550Z",
+      "cancellationReason": "sdfghjkl\n",
+      "cancelledBy": "customer",
+      "cancelledAt": "2025-09-21T09:22:55.519Z",
+      "updatedAt": "2025-09-21T09:20:52.288Z",
+      "cancelledByName": "Ritik Kumar"
+    },
+    {
+      "id": "2b46",
+      "userId": "024d",
+      "serviceId": "1",
+      "serviceName": "Premium Haircut & Styling",
+      "price": 150,
+      "date": "2025-09-21",
+      "slot": "3:30 PM - 4:15 PM",
+      "status": "cancelled",
+      "createdAt": "2025-09-21T09:20:20.306Z",
+      "cancellationReason": "wtertyuifd\n",
+      "cancelledBy": "customer",
+      "cancelledAt": "2025-09-21T09:23:04.917Z",
+      "updatedAt": "2025-09-21T09:20:54.519Z",
+      "cancelledByName": "Ritik Kumar"
+    },
+    {
+      "id": "f58a",
+      "userId": "024d",
+      "serviceId": "1",
+      "serviceName": "Premium Haircut & Styling",
+      "price": 150,
+      "date": "2025-09-22",
+      "slot": "9:00 AM - 9:45 AM",
+      "status": "completed",
+      "createdAt": "2025-09-21T11:08:47.716Z",
+      "cancellationReason": "",
+      "cancelledBy": "",
+      "cancelledAt": "",
+      "updatedAt": "2025-09-21T11:09:12.405Z",
+      "feedback": "asdfghjkl",
+      "stars": 5
+    },
+    {
+      "id": "ade5",
+      "userId": "024d",
+      "serviceId": "2",
+      "serviceName": "Luxury Manicure & Polish",
+      "price": 250,
+      "date": "2025-09-22",
+      "slot": "9:00 AM - 10:00 AM",
+      "status": "completed",
+      "createdAt": "2025-09-21T11:51:47.572Z",
+      "cancellationReason": "",
+      "cancelledBy": "",
+      "cancelledAt": "",
+      "updatedAt": "2025-09-21T11:52:15.750Z",
+      "feedback": "good service",
+      "stars": 5
+    },
+    {
+      "id": "27b8",
+      "userId": "024d",
+      "serviceId": "43",
+      "serviceName": "👰 Pre-Bridal Package",
+      "price": 15000,
+      "date": "2025-09-23",
+      "slot": "9:00 AM - 2:00 PM",
+      "status": "completed",
+      "createdAt": "2025-09-22T12:26:43.713Z",
+      "cancellationReason": "",
+      "cancelledBy": "",
+      "cancelledAt": "",
+      "updatedAt": "2025-09-22T12:27:21.520Z",
+      "feedback": "Excellent Service",
+      "stars": 5
+    }
+  ],
+  "notifications": [
+    {
+      "id": "1339",
+      "userId": "9bfc",
+      "notificationId": "pending-c9f0",
+      "isRead": true,
+      "readAt": "2025-09-19T02:56:06.492Z"
+    },
+    {
+      "id": "ec04",
+      "userId": "024d",
+      "notificationId": "status-c9f0",
+      "isRead": true,
+      "readAt": "2025-09-19T02:57:08.923Z"
+    },
+    {
+      "id": "92fe",
+      "userId": "9bfc",
+      "notificationId": "pending-cf80",
+      "isRead": true,
+      "readAt": "2025-09-19T09:07:28.698Z"
+    },
+    {
+      "id": "baf7",
+      "userId": "024d",
+      "notificationId": "status-cf80",
+      "isRead": true,
+      "readAt": "2025-09-19T09:09:15.244Z"
+    },
+    {
+      "id": "1b63",
+      "userId": "9bfc",
+      "notificationId": "pending-4eb4",
+      "isRead": true,
+      "readAt": "2025-09-21T09:00:02.866Z"
+    },
+    {
+      "id": "a5aa",
+      "userId": "9bfc",
+      "notificationId": "pending-2b46",
+      "isRead": true,
+      "readAt": "2025-09-21T09:20:43.241Z"
+    },
+    {
+      "id": "4ffe",
+      "userId": "024d",
+      "notificationId": "status-4eb4",
+      "isRead": true,
+      "readAt": "2025-09-21T09:21:33.086Z"
+    },
+    {
+      "id": "7d19",
+      "userId": "024d",
+      "notificationId": "status-2b46",
+      "isRead": true,
+      "readAt": "2025-09-21T09:21:34.839Z"
+    },
+    {
+      "id": "0457",
+      "userId": "9bfc",
+      "notificationId": "pending-f58a",
+      "isRead": true,
+      "readAt": "2025-09-21T11:09:17.705Z"
+    },
+    {
+      "id": "0fd9",
+      "userId": "024d",
+      "notificationId": "status-f58a",
+      "isRead": true,
+      "readAt": "2025-09-21T11:09:43.502Z"
+    },
+    {
+      "id": "49df",
+      "userId": "024d",
+      "notificationId": "status-ade5",
+      "isRead": true,
+      "readAt": "2025-09-21T11:52:33.836Z"
+    },
+    {
+      "id": "f810",
+      "userId": "024d",
+      "notificationId": "status-27b8",
+      "isRead": true,
+      "readAt": "2025-09-22T12:28:48.788Z"
+    }
+  ],
+  "homePageConfig": {
+    "id": "homepage-config",
+    "heroSection": {
+      "title": "Welcome to ✨ Luxe Beauty Salon",
+      "subtitle": "Where Beauty Meets Excellence - Experience Premium Care",
+      "backgroundImage": "",
+      "ctaText": "Book Your Transformation",
+      "isVisible": true
+    },
+    "offers": [
+      {
+        "id": "offer1",
+        "title": "New Customer Special",
+        "description": "Get 25% off on your first visit + Complimentary consultation",
+        "discount": "25%",
+        "validUntil": "2025-12-31",
+        "isActive": true,
+        "backgroundColor": "#ff6b6b",
+        "textColor": "#ffffff"
+      },
+      {
+        "id": "offer2",
+        "title": "Luxury Spa Package",
+        "description": "Full body massage + Facial treatment + Manicure combo",
+        "discount": "30%",
+        "validUntil": "2025-12-31",
+        "isActive": true,
+        "backgroundColor": "#4ecdc4",
+        "textColor": "#ffffff"
+      }
+    ],
+    "announcements": [
+      {
+        "id": "announcement1",
+        "title": "🎉 Grand Opening Week Special",
+        "content": "Join us for our celebration week with exclusive offers and prizes!",
+        "type": "success",
+        "isActive": true,
+        "validUntil": "2025-12-31"
+      }
+    ],
+    "aboutSection": {
+      "title": "About ✨ Luxe Beauty Salon",
+      "content": "With over 15 years of experience, we are dedicated to providing world-class beauty and wellness services. Our team of certified professionals uses premium products and cutting-edge techniques to ensure you look and feel your absolute best. From precision haircuts to rejuvenating spa treatments, every service is tailored to your unique needs.",
+      "isVisible": true
+    },
+    "gallery": {
+      "title": "Our Beautiful Work",
+      "images": [],
+      "isVisible": true
+    },
+    "testimonials": {
+      "title": "What Our Valued Clients Say",
+      "reviews": [
+        {
+          "id": "review1",
+          "name": "Sarah Johnson",
+          "rating": 5,
+          "comment": "Absolutely amazing! The staff is incredibly professional and the atmosphere is so relaxing. My facial treatment was beyond expectations!",
+          "service": "Facial Treatment"
+        },
+        {
+          "id": "review2",
+          "name": "Michael Chen",
+          "rating": 5,
+          "comment": "Best beauty salon experience I've ever had! The attention to detail and customer service is outstanding. Highly recommend!",
+          "service": "Haircut & Styling"
+        },
+        {
+          "id": "review3",
+          "name": "Emma Williams",
+          "rating": 5,
+          "comment": "The massage was incredibly relaxing and therapeutic. The ambiance and professionalism here is unmatched!",
+          "service": "Full Body Massage"
+        }
+      ],
+      "isVisible": true
+    },
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/luxebeautysalon",
+      "instagram": "https://www.instagram.com/luxebeautysalon",
+      "twitter": "https://www.twitter.com/luxebeautysalon",
+      "isVisible": true
+    },
+    "contactInfo": {
+      "phone": "+91 98084 70386",
+      "email": "ritikkumar12bicbly@gmail.com",
+      "address": "123 Beauty Street, Luxury District, Bareilly, UP 243001",
+      "hours": "Mon-Fri: 9AM-8PM, Sat: 9AM-6PM, Sun: 10AM-5PM",
+      "isVisible": true
+    },
+    "theme": {
+      "primaryColor": "#ff6beb",
+      "secondaryColor": "#feca9f",
+      "accentColor": "#001eff",
+      "fontFamily": "Inter, sans-serif"
+    },
+    "lastUpdated": "2025-09-21T11:40:36.072Z",
+    "updatedBy": "9bfc"
+  }
+}

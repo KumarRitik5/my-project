@@ -1,0 +1,340 @@
+/* 🎨 Color Contrast Fixes for Better Visibility */
+/* This fixes the overshadowed/faded text colors in your salon app */
+
+/* Force proper text colors for all elements */
+:root {
+  /* High contrast text colors for light mode */
+  --text-primary: #1a202c !important;
+  --text-secondary: #4a5568 !important;
+  --text-muted: #718096 !important;
+  
+  /* Enhanced heading colors */
+  --heading-primary: #2d3748 !important;
+  --heading-secondary: #2d3748 !important;
+  
+  /* Button text colors */
+  --btn-text-primary: #ffffff !important;
+  --btn-text-secondary: #2d3748 !important;
+}
+
+/* Dark mode high contrast colors */
+[data-theme="dark"] {
+  --text-primary: #f7fafc !important;
+  --text-secondary: #e2e8f0 !important;
+  --text-muted: #a0aec0 !important;
+  
+  --heading-primary: #ffffff !important;
+  --heading-secondary: #f7fafc !important;
+  
+  --btn-text-primary: #ffffff !important;
+  --btn-text-secondary: #1a202c !important;
+}
+
+/* Fix all headings with proper contrast */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* Fix all paragraph text */
+p {
+  color: var(--text-secondary) !important;
+  line-height: 1.6 !important;
+}
+
+/* Fix body text */
+body {
+  color: var(--text-primary) !important;
+}
+
+/* Fix hero section text specifically */
+.hero h1 {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-weight: 800 !important;
+  text-shadow: none !important;
+}
+
+.hero p {
+  color: var(--text-secondary) !important;
+  font-weight: 500 !important;
+  opacity: 1 !important;
+}
+
+/* Fix service cards text */
+.service-card h3 {
+  color: var(--heading-secondary) !important;
+  font-weight: 700 !important;
+}
+
+.service-card p {
+  color: var(--text-secondary) !important;
+  opacity: 1 !important;
+}
+
+/* Fix benefits section text */
+.benefit h3 {
+  color: var(--heading-secondary) !important;
+  font-weight: 700 !important;
+}
+
+.benefit p {
+  color: var(--text-secondary) !important;
+  opacity: 1 !important;
+}
+
+/* Fix section titles */
+.features h2,
+.why-us h2 {
+  color: var(--heading-primary) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+/* Fix testimonials text */
+.testimonials h2 {
+  color: var(--primary-color) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+.testimonial-card p {
+  color: var(--text-secondary) !important;
+  opacity: 1 !important;
+}
+
+.testimonial-card .user-name {
+  color: var(--primary-color) !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+}
+
+/* Fix announcement banners - TRANSPARENT BACKGROUNDS */
+.announcement-banner {
+  opacity: 1 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+  border-left: none !important;
+  box-shadow: none !important;
+}
+
+.announcement-banner.info {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+  border-left: none !important;
+}
+
+.announcement-banner.warning {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+  border-left: none !important;
+}
+
+.announcement-banner.success {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+  border-left: none !important;
+}
+
+.announcement-banner.error {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+  border-left: none !important;
+}
+
+/* Fix offers banner */
+.offers-banner-inner {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+/* Fix buttons */
+.cta-button {
+  background: linear-gradient(90deg, #ff6b6b 0%, #4ecdc4 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+.cta-button:hover {
+  background: linear-gradient(90deg, #4ecdc4 0%, #ff6b6b 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Fix dark mode specifically */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: var(--heading-primary) !important;
+}
+
+[data-theme="dark"] p {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .service-card h3,
+[data-theme="dark"] .benefit h3 {
+  color: var(--heading-secondary) !important;
+}
+
+[data-theme="dark"] .service-card p,
+[data-theme="dark"] .benefit p {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .features h2,
+[data-theme="dark"] .why-us h2 {
+  color: var(--primary-color) !important;
+}
+
+/* Fix dark mode announcement banners - TRANSPARENT */
+[data-theme="dark"] .announcement-banner.info {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+}
+
+[data-theme="dark"] .announcement-banner.warning {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+}
+
+[data-theme="dark"] .announcement-banner.success {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+}
+
+[data-theme="dark"] .announcement-banner.error {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+}
+
+/* Override any inherited opacity issues */
+* {
+  opacity: 1 !important;
+}
+
+/* Exception for intentional transparent elements */
+.hero::before,
+.service-card::before,
+.benefit::before,
+::before,
+::after {
+  opacity: 0.5 !important;
+}
+
+/* Fix any text that might be using CSS variables incorrectly */
+.home-container h1,
+.home-container h2,
+.home-container h3,
+.home-container h4,
+.home-container h5,
+.home-container h6 {
+  color: var(--heading-primary) !important;
+}
+
+.home-container p,
+.home-container span:not(.animated-greeting) {
+  color: var(--text-secondary) !important;
+}
+
+/* Fix navigation text if affected */
+.header a,
+.nav-menu a {
+  color: var(--text-primary) !important;
+  opacity: 1 !important;
+}
+
+.header a:hover,
+.nav-menu a:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Fix any card content */
+.card h3,
+.card-title {
+  color: var(--heading-secondary) !important;
+}
+
+.card p,
+.card-text {
+  color: var(--text-secondary) !important;
+}
+
+/* Ensure gradient text for hero title works */
+.animated-greeting {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1) !important;
+  background-size: 300% 300% !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  opacity: 1 !important;
+}
+
+/* Fix any form text */
+input, textarea, select {
+  color: var(--text-primary) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.7 !important;
+}
+
+/* Fix link colors */
+a {
+  color: var(--primary-color) !important;
+  opacity: 1 !important;
+}
+
+a:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Mobile responsiveness for text visibility */
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-primary) !important;
+  }
+  
+  p {
+    color: var(--text-secondary) !important;
+  }
+}
+
+/* Final catch-all for any missed elements */
+.home-container * {
+  opacity: 1 !important;
+}
+
+/* But preserve intentional semi-transparent elements */
+.home-container .hero::before,
+.home-container .announcement-banner,
+.home-container .offers-banner-inner {
+  opacity: inherit !important;
+}

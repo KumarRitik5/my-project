@@ -1,0 +1,241 @@
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: all var(--transition-normal);
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  text-align: center;
+  color: var(--text-color) !important;
+  margin-bottom: 1.5rem;
+  transition: color var(--transition-normal);
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab-buttons button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--card-bg) !important;
+  color: var(--text-secondary) !important;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: 1px solid var(--border-color);
+}
+
+.tab-buttons button:hover {
+  background-color: var(--hover-bg) !important;
+  color: var(--text-color) !important;
+}
+
+.tab-buttons button.active {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  border-color: var(--primary-color);
+}
+
+/* Appointments Section */
+.appointments-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.appointment-item {
+  background-color: var(--card-bg) !important;
+  padding: 1.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+}
+
+.appointment-item:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.appointment-info h3 {
+  color: var(--text-color) !important;
+  margin-bottom: 0.5rem;
+  transition: color var(--transition-normal);
+}
+
+.appointment-info p {
+  color: var(--text-secondary) !important;
+  margin-bottom: 0.25rem;
+  transition: color var(--transition-normal);
+}
+
+.appointment-actions select {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  transition: all var(--transition-normal);
+}
+
+.appointment-actions select:hover {
+  border-color: var(--primary-color);
+}
+
+/* Services Section */
+.add-service-form {
+  background-color: var(--card-bg) !important;
+  padding: 1.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+  display: grid;
+  gap: 1rem;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+}
+
+.add-service-form input {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: all var(--transition-normal);
+}
+
+.add-service-form input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+}
+
+.add-service-form button {
+  padding: 0.75rem;
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-weight: 500;
+}
+
+.add-service-form button:hover {
+  background-color: var(--secondary-color) !important;
+  transform: translateY(-2px);
+}
+
+.services-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.service-item {
+  background-color: var(--card-bg) !important;
+  padding: 1.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+}
+
+.service-item:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.service-info h3 {
+  color: var(--text-color) !important;
+  margin-bottom: 0.5rem;
+  transition: color var(--transition-normal);
+}
+
+.service-info p {
+  color: var(--text-secondary) !important;
+  margin-bottom: 0.25rem;
+  transition: color var(--transition-normal);
+}
+
+.delete-button {
+  padding: 0.5rem 1rem;
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-weight: 500;
+}
+
+.delete-button:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--text-color) !important;
+  border-color: var(--text-color) !important;
+  transform: translateY(-2px);
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary) !important;
+  transition: color var(--transition-normal);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 1rem;
+  }
+
+  .appointment-item,
+  .service-item {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .appointment-actions,
+  .service-actions {
+    width: 100%;
+  }
+
+  .appointment-actions select {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .delete-button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .tab-buttons {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tab-buttons button {
+    flex: 1;
+    min-width: 120px;
+  }
+}

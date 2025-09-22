@@ -1,0 +1,413 @@
+/* Dark Mode Color Fixes - Override all problematic colors */
+
+/* Force theme inheritance for all elements */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Dark theme specific overrides */
+[data-theme="dark"] {
+  /* Background overrides */
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+[data-theme="dark"] body {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .home-container,
+[data-theme="dark"] .services-page,
+[data-theme="dark"] .appointments-page,
+[data-theme="dark"] .booking-container {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Card and component overrides */
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .appointment-card,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .feature-card {
+  background: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Text color overrides with proper contrast */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #ffffff !important; /* High contrast white for headings */
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] span,
+[data-theme="dark"] div {
+  color: #e2e8f0 !important; /* Light gray for good contrast */
+}
+
+[data-theme="dark"] .text-secondary,
+[data-theme="dark"] .muted-text {
+  color: #a0aec0 !important; /* Medium gray for secondary text */
+}
+
+/* Form element overrides */
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background: #2d3748 !important; /* Darker background */
+  color: #ffffff !important; /* White text for high contrast */
+  border-color: #4a5568 !important; /* Visible border */
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] select::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #a0aec0 !important; /* Placeholder text with good contrast */
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] select:focus,
+[data-theme="dark"] textarea:focus {
+  border-color: #ff6b6b !important; /* Primary color for focus */
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.3) !important;
+  background: #374151 !important; /* Slightly lighter on focus */
+}
+
+/* Button overrides with high contrast */
+[data-theme="dark"] .btn-primary {
+  background: #ff6b6b !important;
+  color: #ffffff !important; /* White text for maximum contrast */
+  border-color: #ff6b6b !important;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background: #ee5a52 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .btn-secondary {
+  background: #4a5568 !important;
+  color: #ffffff !important; /* White text for contrast */
+  border-color: #4a5568 !important;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background: #5a6177 !important;
+  color: #ffffff !important;
+}
+
+/* Header and navigation overrides */
+[data-theme="dark"] .header {
+  background: rgba(26, 32, 44, 0.95) !important;
+  border-color: #4a5568 !important;
+}
+
+[data-theme="dark"] .nav-link {
+  color: #e2e8f0 !important; /* Light gray for good visibility */
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: #ffffff !important; /* White for maximum contrast on hover */
+}
+
+[data-theme="dark"] .logo a {
+  color: #ffffff !important; /* White logo text */
+}
+
+/* Footer overrides */
+[data-theme="dark"] .footer {
+  background: #1a202c !important;
+  border-color: #4a5568 !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .footer h3,
+[data-theme="dark"] .footer h4 {
+  color: #ffffff !important;
+}
+
+/* Dropdown and menu overrides */
+[data-theme="dark"] .dropdown-menu {
+  background: #2d3748 !important;
+  border-color: #4a5568 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important; /* Stronger shadow */
+}
+
+[data-theme="dark"] .dropdown-item {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+  background: #4a5568 !important;
+  color: #ffffff !important;
+}
+
+/* Modal and overlay overrides */
+[data-theme="dark"] .modal-overlay {
+  background: rgba(0, 0, 0, 0.8) !important; /* Darker overlay */
+}
+
+[data-theme="dark"] .modal-content {
+  background: #2d3748 !important;
+  color: #ffffff !important;
+  border-color: #4a5568 !important;
+}
+
+[data-theme="dark"] .modal-title {
+  color: #ffffff !important;
+}
+
+/* Dashboard specific overrides */
+[data-theme="dark"] .owner-dashboard,
+[data-theme="dark"] .admin-dashboard {
+  background: #1a202c !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .service-ratings-section,
+[data-theme="dark"] .service-rating-card,
+[data-theme="dark"] .service-card {
+  background: #2d3748 !important;
+  border-color: #4a5568 !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .appointments-table {
+  background: #2d3748 !important;
+  border-color: #4a5568 !important;
+}
+
+[data-theme="dark"] .appointments-table th,
+[data-theme="dark"] .appointments-table td {
+  border-color: #4a5568 !important;
+  color: #e2e8f0 !important;
+  background: transparent !important;
+}
+
+[data-theme="dark"] .appointments-table thead tr {
+  background: #374151 !important;
+}
+
+[data-theme="dark"] .appointments-table thead th {
+  color: #ffffff !important; /* White header text */
+  font-weight: 600;
+}
+
+[data-theme="dark"] .appointments-table tbody tr:hover {
+  background: #374151 !important;
+}
+
+/* Error and success message overrides */
+[data-theme="dark"] .error-message {
+  background: rgba(239, 68, 68, 0.2) !important;
+  color: #fca5a5 !important; /* Light red for good contrast */
+  border-color: #ef4444 !important;
+}
+
+[data-theme="dark"] .success-message {
+  background: rgba(34, 197, 94, 0.2) !important;
+  color: #86efac !important; /* Light green for good contrast */
+  border-color: #22c55e !important;
+}
+
+[data-theme="dark"] .warning-message {
+  background: rgba(245, 158, 11, 0.2) !important;
+  color: #fcd34d !important; /* Light yellow for good contrast */
+  border-color: #f59e0b !important;
+}
+
+/* Status badges with high contrast */
+[data-theme="dark"] .status-confirmed {
+  background: rgba(34, 197, 94, 0.25) !important;
+  color: #86efac !important; /* Light green */
+  border-color: #22c55e !important;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .status-cancelled {
+  background: rgba(239, 68, 68, 0.25) !important;
+  color: #fca5a5 !important; /* Light red */
+  border-color: #ef4444 !important;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .status-completed {
+  background: rgba(59, 130, 246, 0.25) !important;
+  color: #93c5fd !important; /* Light blue */
+  border-color: #3b82f6 !important;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .status-pending {
+  background: rgba(245, 158, 11, 0.25) !important;
+  color: #fcd34d !important; /* Light yellow */
+  border-color: #f59e0b !important;
+  font-weight: 600;
+}
+
+/* Links with proper visibility */
+[data-theme="dark"] a {
+  color: #60a5fa !important; /* Light blue for links */
+}
+
+[data-theme="dark"] a:hover {
+  color: #93c5fd !important; /* Lighter blue on hover */
+}
+
+/* Theme toggle button visibility */
+[data-theme="dark"] .theme-toggle {
+  background: #4a5568 !important;
+  color: #ffffff !important;
+  border-color: #6b7280 !important;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background: #5a6177 !important;
+  color: #ffffff !important;
+}
+
+/* Ensure user dropdown visibility */
+[data-theme="dark"] .user-dropdown {
+  background: #2d3748 !important;
+  border-color: #4a5568 !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .user-name {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .user-role {
+  color: #a0aec0 !important;
+}
+
+/* Service cards on services page */
+[data-theme="dark"] .service-description {
+  color: #a0aec0 !important;
+}
+
+[data-theme="dark"] .service-price {
+  color: #10b981 !important; /* Green for price */
+  font-weight: 600;
+}
+
+/* Time slot visibility */
+[data-theme="dark"] .time-slot-item.available {
+  background: #374151 !important;
+  color: #e2e8f0 !important;
+  border-color: #6b7280 !important;
+}
+
+[data-theme="dark"] .time-slot-item.available:hover {
+  background: #4a5568 !important;
+  color: #ffffff !important;
+  border-color: #ff6b6b !important;
+}
+
+[data-theme="dark"] .time-slot-item.selected {
+  background: #ff6b6b !important;
+  color: #ffffff !important;
+  border-color: #ff6b6b !important;
+}
+
+[data-theme="dark"] .time-slot-item.unavailable {
+  background: #1f2937 !important;
+  color: #6b7280 !important;
+  border-color: #374151 !important;
+}
+
+/* Profile page fixes */
+[data-theme="dark"] .profile-info,
+[data-theme="dark"] .profile-card {
+  background: #2d3748 !important;
+  color: #e2e8f0 !important;
+  border-color: #4a5568 !important;
+}
+
+[data-theme="dark"] .profile-label {
+  color: #a0aec0 !important;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .profile-value {
+  color: #ffffff !important;
+}
+
+/* Fix any remaining white backgrounds */
+[data-theme="dark"] .white-bg,
+[data-theme="dark"] .bg-white {
+  background: #2d3748 !important;
+  color: #e2e8f0 !important;
+}
+
+/* Fix scrollbar for dark mode */
+[data-theme="dark"] ::-webkit-scrollbar {
+  width: 8px;
+  background: #1a202c;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #2d3748;
+  border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #ff6b6b;
+}
+
+/* Light mode contrast fixes */
+[data-theme="light"] {
+  /* Ensure text is dark enough on light backgrounds */
+  color: #1a202c !important;
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: #1a202c !important; /* Dark headings on light bg */
+}
+
+[data-theme="light"] .text-secondary,
+[data-theme="light"] .muted-text {
+  color: #4a5568 !important; /* Dark gray for secondary text */
+}
+
+[data-theme="light"] input,
+[data-theme="light"] select,
+[data-theme="light"] textarea {
+  background: #ffffff !important;
+  color: #1a202c !important;
+  border-color: #d1d5db !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] select::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Ensure proper contrast for light mode buttons */
+[data-theme="light"] .btn-secondary {
+  background: #f3f4f6 !important;
+  color: #1f2937 !important;
+  border-color: #d1d5db !important;
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: #e5e7eb !important;
+  color: #111827 !important;
+}
